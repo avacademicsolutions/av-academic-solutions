@@ -25,13 +25,28 @@ export default function Home() {
             academic frameworks built for institutional scale and long-term impact.
           </p>
 
-          <a
-            href="/contact"
-            className="bg-[#C59D3B] text-white px-10 py-3 rounded-md hover:bg-[#B48C2E] transition shadow-md"
-          >
-            Schedule an Academic Consultation
-          </a>
-        </div>
+         <div className="flex justify-center">
+  <a
+    href="/contact"
+    className="
+      inline-block
+      bg-[#C59D3B]
+      text-white
+      px-8
+      md:px-10
+      py-3
+      rounded-md
+      hover:bg-[#B48C2E]
+      transition
+      shadow-md
+      text-base
+      md:text-lg
+    "
+  >
+    Schedule Consultation
+  </a>
+</div>
+      </div>
       </section>
 
       <Divider />
