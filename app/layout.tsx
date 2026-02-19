@@ -24,7 +24,7 @@ export default function RootLayout({
     </a>
 
     {/* Desktop Menu */}
-    <div className="space-x-8 hidden md:flex items-center">
+    <div className="space-x-6 flex items-center text-sm">
       <a href="/" className="text-gray-700 hover:text-slate-900 transition">
         Home
       </a>
