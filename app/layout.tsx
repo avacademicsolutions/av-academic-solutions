@@ -15,16 +15,18 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased" suppressHydrationWarning={true}>
 
-        <nav className="bg-white shadow-sm sticky top-0 z-50">
-  <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+       <nav className="bg-white shadow-sm sticky top-0 z-50">
+  <div className="max-w-7xl mx-auto px-6 py-4">
 
-    {/* Logo */}
-    <a href="/" className="text-xl font-semibold text-slate-900">
-      AV Academic Solutions
-    </a>
+    {/* Top Row */}
+    <div className="flex justify-between items-center">
+      <a href="/" className="text-lg font-semibold text-slate-900">
+        AV Academic Solutions
+      </a>
+    </div>
 
-    {/* Desktop Menu */}
-    <div className="space-x-6 flex items-center text-sm">
+    {/* Menu */}
+    <div className="mt-4 flex flex-col space-y-3 md:mt-0 md:flex-row md:space-y-0 md:space-x-8 md:items-center md:justify-end text-sm">
       <a href="/" className="text-gray-700 hover:text-slate-900 transition">
         Home
       </a>
@@ -39,7 +41,7 @@ export default function RootLayout({
       </a>
       <a
         href="/contact"
-        className="bg-amber-600 text-white px-4 py-2 rounded-md hover:bg-amber-700 transition"
+        className="bg-amber-600 text-white px-4 py-2 rounded-md hover:bg-amber-700 transition text-center"
       >
         Request Proposal
       </a>
@@ -48,6 +50,7 @@ export default function RootLayout({
   </div>
 </nav>
 
+  
         {children}
 
         {/* FOOTER */}
