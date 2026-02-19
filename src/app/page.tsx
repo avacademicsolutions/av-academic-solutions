@@ -1,84 +1,120 @@
+function Divider() {
+  return (
+    <div className="py-20">
+      <div className="w-16 h-[1px] bg-[#C59D3B] mx-auto opacity-60"></div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-800">
+    <main className="bg-white text-slate-900">
 
-      {/* HERO SECTION */}
-      <section
-        id="home"
-        className="bg-slate-900 text-white py-32 px-6 text-center"
-      >
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Structured Academic Excellence.
-        </h1>
-        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
-          Delivering curriculum design, educational content development, and
-          institutional academic consulting aligned with NEP 2020 and
-          contemporary global standards.
-        </p>
-        <a
-          href="#contact"
-          className="bg-amber-600 hover:bg-amber-700 px-8 py-3 rounded-md text-white font-medium transition"
-        >
-          Request a Proposal
-        </a>
+      {/* HERO */}
+      <section id="home" className="bg-slate-900 text-white pt-44 pb-36 px-6 text-center relative overflow-hidden">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-medium leading-[1.08] mb-10 tracking-[-0.02em]">
+            Strategic Academic Architecture
+            <br />
+            for Modern Education Systems
+          </h1>
+
+          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-14 leading-[1.7]">
+            We partner with schools, universities, government bodies, and
+            education ventures to design policy-aligned, research-driven
+            academic frameworks built for institutional scale and long-term impact.
+          </p>
+
+          <a
+            href="/contact"
+            className="bg-[#C59D3B] text-white px-10 py-3 rounded-md hover:bg-[#B48C2E] transition shadow-md"
+          >
+            Schedule an Academic Consultation
+          </a>
+        </div>
       </section>
 
-      {/* ABOUT SECTION */}
-      <section
-        id="about"
-        className="py-24 px-6 max-w-6xl mx-auto text-center"
-      >
-        <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-          Who We Are
-        </h2>
-        <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-          AV Academic Solutions & Consulting is a specialized academic consulting
-          firm committed to designing structured, research-backed, and
-          policy-aligned educational frameworks for institutions across India.
-          Our work reflects NEP 2020 principles, competency-based education
-          models, and global academic standards.
-        </p>
-      </section>
+      <Divider />
 
-      {/* SERVICES SECTION */}
-      <section
-        id="services"
-        className="bg-gray-50 py-24 px-6"
-      >
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-14">
-            Our Core Services
+      {/* WHO WE WORK WITH */}
+      <section id="about" className="py-28 px-6 text-center academic-bg">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-16">
+            Who We Work With
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-10">
-
-            <div className="bg-white p-8 shadow-sm rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">
-                Curriculum Development
+          <div className="grid md:grid-cols-3 gap-14 text-slate-700 leading-relaxed">
+            <div>
+              <h3 className="font-semibold text-lg mb-3">
+                K-12 Schools & School Groups
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Structured and competency-based curriculum frameworks aligned
-                with NEP 2020 and contemporary educational standards.
+              <p>
+                Structured curriculum development, academic documentation,
+                and NEP-aligned institutional frameworks.
               </p>
             </div>
 
-            <div className="bg-white p-8 shadow-sm rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">
-                Educational Content Design
+            <div>
+              <h3 className="font-semibold text-lg mb-3">
+                Higher Education Institutions
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Development of textbooks, teacher manuals, digital modules,
-                assessments, and academic documentation.
+              <p>
+                Program architecture, competency mapping, and governance-aligned
+                academic structuring models.
               </p>
             </div>
 
-            <div className="bg-white p-8 shadow-sm rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">
-                Institutional Consulting
+            <div>
+              <h3 className="font-semibold text-lg mb-3">
+                EdTech & Education Ventures
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Academic audits, program structuring, implementation planning,
-                and policy documentation support.
+              <p>
+                Scalable academic systems, assessment mapping,
+                and structured content architecture for digital platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* CORE SERVICES */}
+      <section id="services" className="bg-gray-50 py-28 px-6 text-center">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-20">
+            Core Academic Consulting Services
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-12">
+
+            <div className="group bg-white p-10 rounded-lg shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-5 group-hover:text-[#C59D3B] transition">
+                Curriculum Architecture
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                Competency-based curriculum design aligned with NEP 2020,
+                policy frameworks, and contemporary institutional standards.
+              </p>
+            </div>
+
+            <div className="group bg-white p-10 rounded-lg shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-5 group-hover:text-[#C59D3B] transition">
+                Academic Policy & Structuring
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                Institutional documentation systems, academic governance
+                structuring, and long-term implementation planning.
+              </p>
+            </div>
+
+            <div className="group bg-white p-10 rounded-lg shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-5 group-hover:text-[#C59D3B] transition">
+                Assessment & Framework Design
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                Outcome-driven evaluation models, competency mapping,
+                and scalable academic assessment systems.
               </p>
             </div>
 
@@ -86,60 +122,122 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NEP ALIGNMENT SECTION */}
-      <section className="py-24 px-6 text-center max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-          Aligned with India’s Educational Vision
-        </h2>
-        <p className="text-lg leading-relaxed max-w-3xl mx-auto text-gray-700">
-          Our academic frameworks are developed in alignment with the National
-          Education Policy (NEP) 2020, competency-based education models,
-          experiential learning principles, and outcome-driven curriculum
-          design. Every project reflects structural clarity, pedagogical
-          relevance, and institutional applicability.
-        </p>
-      </section>
+      <Divider />
 
-      {/* FOUNDER MESSAGE */}
-      <section className="bg-slate-900 text-white py-24 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-10">
-            A Note from the Founder
+      {/* SELECTED WORK */}
+      <section id="work" className="py-28 px-6 text-center academic-bg">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-16">
+            Selected Academic Engagements
           </h2>
-          <p className="text-lg leading-relaxed mb-6">
-            Education must be structured, purposeful, and forward-looking.
-            At AV Academic Solutions & Consulting, our objective is not merely
-            to develop academic content, but to design institutional frameworks
-            that enable meaningful and sustainable learning.
-          </p>
-          <p className="text-lg leading-relaxed">
-            Every engagement is guided by integrity, research-backed
-            methodology, and alignment with national educational priorities.
-          </p>
-          <p className="mt-10 font-medium">
-            — Founder, AV Academic Solutions & Consulting
-          </p>
+
+          <div className="space-y-14 text-left max-w-4xl mx-auto text-slate-700 leading-relaxed">
+
+            <div>
+              <h3 className="font-semibold text-xl mb-3">
+                Moral & Value Education Curriculum Architecture
+              </h3>
+              <p>
+                Designed a structured value-based academic framework integrating
+                competency mapping, teacher manuals, and institutional
+                implementation roadmaps.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-xl mb-3">
+                Institutional Academic Restructuring Initiative
+              </h3>
+              <p>
+                Developed academic documentation systems, policy-aligned
+                governance models, and structured program architecture for scalable delivery.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-xl mb-3">
+                Competency-Based Framework for EdTech Platform
+              </h3>
+              <p>
+                Built scalable curriculum systems with structured
+                outcome-based assessment mapping for digital-first environments.
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
 
+      <Divider />
+
+      {/* WHY US */}
+      <section id="why" className="bg-gray-50 py-32 px-6">
+        <div className="max-w-5xl mx-auto">
+
+          <h2 className="text-3xl md:text-4xl font-semibold mb-20 text-center">
+            Why AV Academic Solutions
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-14 text-left">
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">
+                NEP 2020 Alignment
+              </h3>
+              <p className="text-slate-600 leading-[1.7]">
+                Academic frameworks grounded in the principles of the National
+                Education Policy 2020.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">
+                National Curriculum Framework Integration
+              </h3>
+              <p className="text-slate-600 leading-[1.7]">
+                Structured incorporation of NCF guidelines into curriculum
+                architecture and documentation systems.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">
+                Research-Backed Academic Structuring
+              </h3>
+              <p className="text-slate-600 leading-[1.7]">
+                Evidence-driven methodology integrating competency mapping
+                and scalable governance systems.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">
+                Institutional Scalability & Governance Focus
+              </h3>
+              <p className="text-slate-600 leading-[1.7]">
+                Designed for multi-campus scalability and policy compliance.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
       {/* FINAL CTA */}
-      <section
-        id="contact"
-        className="py-24 px-6 text-center"
-      >
-        <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-          Partner With Us
-        </h2>
-        <p className="text-lg mb-10 text-gray-700">
-          Collaborate with us to design structured academic solutions tailored
-          to your institution’s vision.
-        </p>
-        <a
-          href="#home"
-          className="bg-amber-600 hover:bg-amber-700 px-8 py-3 rounded-md text-white font-medium transition"
-        >
-          Request a Proposal
-        </a>
+      <section id="contact-cta" className="bg-slate-900 text-white py-32 px-6 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-8">
+            Partner With Us to Structure Your Academic Vision
+          </h2>
+          <a
+            href="/contact"
+            className="bg-[#C59D3B] text-white px-10 py-3 rounded-md hover:bg-[#B48C2E] transition shadow-md"
+          >
+            Initiate Institutional Discussion
+          </a>
+        </div>
       </section>
 
     </main>

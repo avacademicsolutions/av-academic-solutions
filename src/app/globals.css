@@ -5,3 +5,17 @@
 html {
   scroll-behavior: smooth;
 }
+
+:root {
+  --academic-gold: #C59D3B;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-cormorant);
+  letter-spacing: -0.3px;
+}
+
+.academic-bg {
+  background-image: radial-gradient(circle at 1px 1px, rgba(197,157,59,0.08) 1px, transparent 0);
+  background-size: 40px 40px;
+}
