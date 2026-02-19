@@ -1,62 +1,74 @@
-import "./globals.css";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "AV Academic Solutions & Consulting",
-  description: "Structured Academic Excellence.",
-};
+import { useState } from "react";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <html lang="en">
-      <body className="antialiased" suppressHydrationWarning={true}>
+      <body className="antialiased">
 
-       <nav className="bg-white shadow-sm sticky top-0 z-50">
-  <div className="max-w-7xl mx-auto px-6 py-4">
+        {/* NAVBAR */}
+        <nav className="bg-white shadow-sm sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    {/* Top Row */}
-    <div className="flex justify-between items-center">
-      <a href="/" className="text-lg font-semibold text-slate-900">
-        AV Academic Solutions
-      </a>
-    </div>
+            {/* Logo */}
+            <a href="/" className="text-lg font-semibold text-slate-900">
+              AV Academic Solutions
+            </a>
 
-    {/* Menu */}
-    <div className="mt-4 flex flex-col space-y-3 md:mt-0 md:flex-row md:space-y-0 md:space-x-8 md:items-center md:justify-end text-sm">
-      <a href="/" className="text-gray-700 hover:text-slate-900 transition">
-        Home
-      </a>
-      <a href="/#about" className="text-gray-700 hover:text-slate-900 transition">
-        About
-      </a>
-      <a href="/#services" className="text-gray-700 hover:text-slate-900 transition">
-        Services
-      </a>
-      <a href="/contact" className="text-gray-700 hover:text-slate-900 transition">
-        Contact
-      </a>
-      <a
-        href="/contact"
-        className="bg-amber-600 text-white px-4 py-2 rounded-md hover:bg-amber-700 transition text-center"
-      >
-        Request Proposal
-      </a>
-    </div>
+            {/* Desktop Menu */}
+            <div className="hidden md:flex space-x-8 items-center text-sm">
+              <a href="/" className="hover:text-slate-900">Home</a>
+              <a href="/#about" className="hover:text-slate-900">About</a>
+              <a href="/#services" className="hover:text-slate-900">Services</a>
+              <a href="/contact" className="hover:text-slate-900">Contact</a>
+              <a
+                href="/contact"
+                className="bg-amber-600 text-white px-4 py-2 rounded-md hover:bg-amber-700 transition"
+              >
+                Request Proposal
+              </a>
+            </div>
 
-  </div>
-</nav>
+            {/* Mobile Hamburger */}
+            <button
+              className="md:hidden text-2xl"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              ☰
+            </button>
 
-  
+          </div>
+
+          {/* Mobile Menu Dropdown */}
+          {menuOpen && (
+            <div className="md:hidden px-6 pb-4 space-y-3 text-sm bg-white border-t">
+              <a href="/" className="block">Home</a>
+              <a href="/#about" className="block">About</a>
+              <a href="/#services" className="block">Services</a>
+              <a href="/contact" className="block">Contact</a>
+              <a
+                href="/contact"
+                className="block bg-amber-600 text-white px-4 py-2 rounded-md text-center"
+              >
+                Request Proposal
+              </a>
+            </div>
+          )}
+        </nav>
+
         {children}
 
         {/* FOOTER */}
         <footer className="bg-slate-900 text-white text-center py-8 mt-20">
           <p>
-            © {new Date().getFullYear()} AV Academic Solutions & Consulting. All Rights Reserved.
+            © {new Date().getFullYear()} AV Academic Solutions & Consulting.
           </p>
         </footer>
 
