@@ -68,9 +68,20 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-10 items-center text-sm font-medium text-slate-200">
 
-          <Link href="/" className="hover:text-white transition">
-            Home
-          </Link>
+          <button
+            onClick={() => {
+            setMenuOpen(false);
+
+            if (pathname === "/") {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            } else {
+              router.push("/");
+            }
+            }}
+              className="hover:text-white transition"
+              >
+              Home
+              </button>
 
           <button
             onClick={() => handleSectionClick("about")}
@@ -111,13 +122,20 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden px-8 pb-8 pt-4 space-y-5 text-sm bg-slate-900 border-t border-slate-800 text-slate-200">
 
-          <Link
-            href="/"
-            onClick={() => setMenuOpen(false)}
-            className="block hover:text-white transition"
-          >
-            Home
-          </Link>
+          <button
+          onClick={() => {
+            setMenuOpen(false);
+
+            if (pathname === "/") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+           } else {
+            router.push("/");
+             }
+              }}
+            className="block text-left hover:text-white transition"
+            >
+             Home
+            </button>
 
           <button
             onClick={() => handleSectionClick("about")}
