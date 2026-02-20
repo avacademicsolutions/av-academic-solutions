@@ -10,21 +10,64 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://avacademicsolutions.com"),
+
   title: {
     default: "AV Academic Solutions & Consulting",
     template: "%s | AV Academic Solutions",
   },
+
   description:
-    "Strategic academic architecture for schools, universities, government institutions, and education ventures. Policy-aligned, research-driven, institutional frameworks.",
-  metadataBase: new URL("https://avacademicsolutions.com"),
+    "Strategic academic architecture for schools, universities, government institutions, and education ventures. Policy-aligned, research-driven, institutionally scalable frameworks aligned with NEP 2020 and NCF principles.",
+
+  keywords: [
+    "Academic Consulting India",
+    "NEP 2020 Curriculum Design",
+    "National Curriculum Framework Alignment",
+    "Institutional Academic Structuring",
+    "EdTech Curriculum Development",
+    "Higher Education Academic Framework",
+  ],
+
+  authors: [{ name: "AV Academic Solutions" }],
+  creator: "AV Academic Solutions",
+  publisher: "AV Academic Solutions",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
   openGraph: {
     title: "AV Academic Solutions & Consulting",
     description:
-      "Strategic academic architecture for modern education systems.",
+      "Strategic academic architecture for modern education systems aligned with NEP 2020 and National Curriculum Framework principles.",
     url: "https://avacademicsolutions.com",
     siteName: "AV Academic Solutions",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "AV Academic Solutions",
+      },
+    ],
     locale: "en_IN",
     type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "AV Academic Solutions & Consulting",
+    description:
+      "Policy-aligned academic architecture for schools, universities, and education ventures.",
+    images: ["/og-image.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
