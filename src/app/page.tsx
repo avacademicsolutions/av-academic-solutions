@@ -109,10 +109,10 @@ const testimonials = [
 ];
 
 const stats = [
-  { num: "50+", label: "Institutions Served" },
-  { num: "12+", label: "Years of Expertise" },
-  { num: "200+", label: "Frameworks Delivered" },
-  { num: "8", label: "States Across India" },
+  { num: "8+", label: "Institutions Served" },
+  { num: "5+", label: "Years of Expertise" },
+  { num: "20+", label: "Frameworks Delivered" },
+  { num: "4", label: "States Across India" },
 ];
 
 const engagements = [
